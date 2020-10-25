@@ -1,0 +1,12 @@
+body {
+    background-color: gainsboro;
+}
+
+.card, #back-card {
+    padding: 5px;
+    width: 137px;
+}
+
+#back-card:hover {
+    cursor: pointer;
+}
