@@ -1,0 +1,181 @@
+body {
+	background: darkgray;
+	font-family: Geneva, Arial, Helvetica, sans-serif;
+    padding:0;
+    margin: 0;
+	font-size: 14px;
+}
+
+.logotype {
+	top: 50%;
+	color: white;
+	font-size: 26px;
+	font-weight: bold;
+	padding-left: 5px;
+	text-decoration: none;
+	float: left;
+	border:none;
+}
+
+.topnav {
+	position: relative;
+	background-color: #333;
+	overflow: hidden;
+}
+
+.topnav a {
+	float: left;
+	color: #f2f2f2;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	font-size: 17px;
+}
+
+.topnav a:hover {
+	background-color: #ddd;
+	color: black;
+}
+
+.topnav a.active {
+	background-color: #4CAF50;
+	color: white;
+}
+
+.topnav_right {
+	float: right;
+}
+
+* {box-sizing: border-box}
+
+.container {
+	padding: 16px;
+	position:relative;
+}
+
+input[type=text], input[type=password], input[type=tel] {
+	width: 300px;
+	padding: 15px;
+	margin: 5px 0 22px 0;
+	display: inline-block;
+	border: none;
+	background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+	background-color: #ddd;
+	outline: none;
+}
+
+hr {
+	border: 1px solid #f1f1f1;
+	margin-bottom: 25px;
+}
+
+.button {
+	background-color: #4CAF50;
+	color: white;
+	padding: 16px 20px;
+	margin: 4px 10px;
+	border: none;
+	cursor: pointer;
+	width: 10%;
+	opacity: 0.9;
+}
+
+.button:hover {
+	background-color: #999999;
+	opacity: 0.8;
+}
+
+a {
+	color: dodgerblue;
+}
+
+.product {
+	width: 300px;
+	height: 300px;
+	background-color: #2ECC71;
+	margin: 10px;
+	display: inline-block;
+}
+
+.product_photo:hover {
+	opacity: 0.7;
+	cursor: pointer;
+}
+
+.product_photo {
+	width: 170px;
+	height: 170px;
+	margin-left: 60px;
+	text-align: center;
+}
+
+.product_image {
+	width: 170px;
+	height: 170px;
+	padding: 8px;
+}
+
+.product_info {
+	width: 100%;
+	margin-top: -10px;
+}
+
+.product_info > ul > li {
+	list-style: none;
+	padding-top: 10px;
+	float: left;
+	margin-left: -10px;
+	width: 100%;
+}
+
+.product_mark {
+	font-size: 16px;
+	font-weight: bold;
+	color: #B82333;
+}
+
+.product_description {
+	font-size: 14px;
+}
+
+.product_price {
+	font-size: 15px;
+	font-style: italic;
+}
+
+.create_order {
+	text-align: center;
+}
+
+.error {
+	height: 50px;
+	background-color: aqua;
+	width: 100%;
+	border-radius: 10px
+}
+
+.error > p {
+	font-size: 20px;
+	padding: 10px;
+	color: #B82333;
+	font-weight: bold;
+	font-stretch: ultra-expanded;
+}
+
+.info {
+	height: 50px;
+	background-color: aqua;
+	width: 100%;
+	border-radius: 10px
+}
+
+.info > p {
+	font-size: 20px;
+	padding: 10px;
+	color: #ED6D08;
+	font-weight: bold;
+	font-stretch: ultra-expanded;
+}

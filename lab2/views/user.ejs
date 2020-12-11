@@ -1,0 +1,29 @@
+<%- include('partials/header') %>
+
+<% if (auth) { %>
+    <form action="/user" method="post">
+
+        <p>
+            <b>Логи:</b>
+            <input type="text" name="login" value="<%= user.login %>" readonly>
+        </p>
+
+        <p>
+        <b>Имя:</b>
+        <input type="text" name="name" value="<%= user.name %>" required>
+        </p>
+
+        <p>
+        <b>Телефон:</b>
+        <input type="tel" name="phone" value="<%= user.telephone %>" required>
+        </p>
+
+        <button type="submit" value="Отправить" class="button">Изменить данные</button>
+    </form>
+<% } else { %>
+    <div class="error">
+        <p>Авторизируйтесь, чтобы войти в личный кабинет.</p>
+    </div>
+<% } %>
+
+<%- include('partials/footer') %>

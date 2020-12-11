@@ -1,0 +1,20 @@
+<%- include('partials/header') %>
+
+<% for (let i = 0; i < bicycles.length; i++) { %>
+<div class="product">
+        <div class="product_photo">
+            <a href="/create_order/<%=  bicycles[i].id_bicycles %> ">
+                <img class="product_image" src="/images/<%= bicycles[i].mark %>.jpg">
+            </a>
+        </div>
+        <div class="product_info">
+            <ul>
+                <li class="product_mark"><%=  bicycles[i].mark %> </li>
+                <li class="product_description"><%=  bicycles[i].description %> </li>
+                <li class="product_price"><%=  bicycles[i].price %>  руб/час</li>
+            </ul>
+        </div>
+    </div>
+<% } %> 
+
+<%- include('partials/footer') %>

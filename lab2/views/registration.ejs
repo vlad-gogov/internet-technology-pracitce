@@ -1,0 +1,33 @@
+<%- include('partials/header') %>
+
+<% if (auth)  { %>
+        <div class="error">
+            <p>Неверная ссылка</p>
+        </div>
+    <% } else if (isRegister) { %>
+        <div class="create_order">
+            <h2>Регистрация</h2>
+            <form action="/registration" method="post">
+
+                <p><b>Введите логин:</b><br>
+                <p><input type="text" name="login" required></p>
+
+                <p><b>Введите пароль:</b><br>
+                <p><input type="password" name="password" required></p>
+
+                <p><b>Введите имя:</b><br>
+                <p><input type="text" name="name" required></p>
+
+                <p><b>Введите телефон:</b><br>
+                <p><input type="tel" name="phone" required></p>
+
+                <p><input type="submit" value="Зарегистрироваться" class="button"></p>
+            </form>
+        </div>
+    <% } else { %>
+        <div class="info">
+            <p>Регистрация прошла успешно. Теперь вы можете зайти в личный кабинет.</p>
+        </div>
+<% } %>
+
+<%- include('partials/footer') %>

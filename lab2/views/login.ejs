@@ -1,0 +1,19 @@
+<%- include('partials/header') %>
+
+<% if (auth) { %>
+    <div class="error">
+        <p><%= text %></p>
+    </div>
+<% } else { %> 
+    <form action="/login" method="post">
+        <b>Логин:</b>
+        <input type="text" placeholder="Введите логин" name="login" required>
+
+        <b>Пароль:</b>
+        <input type="password" placeholder="Введите пароль" name="password" required>
+
+        <button type="submit" value="Отправить" class="button">Вход</button>
+    </form>
+<% } %> 
+
+<%- include('partials/footer') %>

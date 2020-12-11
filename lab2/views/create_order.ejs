@@ -1,0 +1,45 @@
+<%- include('partials/header') %>
+
+<% if (auth)  { %> 
+    <% if (create_order) { %>
+        <div class="info">
+            <p>Прокат оформлен. Для активации перейдите по ссылке: <a href="/activations/<%= id_order %>">/activations/<%= id_order %></a></p>
+        </div>
+    <% } else { %>
+        <div class="create_order">
+            <h2>Заказ на прокат велосипеда</h2>
+            <form action="/create_order" method="post">
+                <p><b>Выберите адрес получения велосипеда:</b><br>
+                <p><select name="place"  size="1" required>
+                    <% for (let i = 0; i < place.length; i++) { %>
+                        <option value="<%= place[i].id_place %>"> <%= place[i].name_place %> </option>
+                    <% } %>
+                </select></p>
+
+                <p><b>Ваше имя:</b><br>
+                <p><input type="text" value="<%= user.name %> " name="name" readonly></p>
+
+                <p><b>Введите дату и время:</b><br>
+                <p><input type="datetime-local" name="date" required></p>
+
+                <p><b>Ваш номер телефона:</b><br>
+                <p><input type="tel" name="phone" value="<%= user.telephone %> " readonly></p>
+
+                <p><b>Марка велосипеда</b><br>
+                <p><input type="text" name="mark" readonly value="<%= mark %> "></p>
+
+                <p><b>Цена велосипеда</b><br>
+                <p><input type="text" name="price" readonly value="<%= price %> "></p>
+                <input type="hidden" name="id_mark" value="<%= id_mark %> ">
+
+                <p><input type="submit" value="Отправить" class="button"></p>
+            </form>
+        </div>
+        <% } %>
+<% } else { %>
+    <div class="error">
+        <p>Авторизируйтесь, чтобы зарезервировать велосипед</p>
+    </div>
+<% } %>
+
+<%- include('partials/footer') %>

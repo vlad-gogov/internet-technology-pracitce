@@ -1,0 +1,18 @@
+<nav class="topnav">
+    <a href="/" class="logotype">Прокат велосипедов</a>
+    <% if (auth) { %>
+        <% if (user.role <= 2) { %>
+            <a href="/activations">Активация проката</a>
+            <a href="/close_order">Завершение проката</a>
+        <% } %>
+            <div class="topnav_right">
+                <a href="/user">Личный кабинет</a>
+                <a href="/logout">Выйти</a>
+            </div>
+    <% } else { %>
+        <div class="topnav_right">
+            <a href="/login">Вход</a>
+            <a href="/registration">Регистрация</a>
+        </div>
+    <% } %>
+</nav>

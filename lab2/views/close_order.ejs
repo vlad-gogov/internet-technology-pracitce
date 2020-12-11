@@ -1,0 +1,39 @@
+<%- include('partials/header') %>
+
+<% if (auth) { %>
+    <% if(close) { %>
+        <div class="info">
+            <p><%= text %></p>
+        </div>
+    <% } else { %>
+        <% if(user.role <= 2) { %>
+                <% if (order.length != 0) { %>
+                    <form action="/close_order" method="post">
+                        <p><b>Выберите пункт приема велосипеда: </b><br>
+                        <p><select name="id_reception"  size="1" required>
+                                <% for (let i = 0; i < place.length; i++) { %>
+                                    <option value="<%= place[i].id_place %> "><%= place[i].name_place %> </option>
+                                <% } %>
+                            </select></p>
+                        <p><b>Выберите вылосипед для завершения: </b><br>
+                        <p><select name="order"  size="1" required>
+                                <% for (let i = 0; i < order.length; i++) { %>
+                                <option value="<%=  order[i].id_order %> "> <%= users[order[i].id_user - 1].name %> <%=  order[i].bicycles_mark %>  <%=  order[i].date %> </option>
+                                <% } %>
+                            </select></p>
+                        <p><input type = "submit" value="Завершить прокат" class="button"></p>
+                    </form>
+            <% } else { %>
+                <div class="info">
+                    <p>Нет активных прокатов</p>
+                </div>
+            <% } %>
+        <% } %>
+    <% } %>
+<% } else { %>
+    <div class="info">
+        <p>Неверный адресс страницы</p>
+    </div>
+<% } %>
+
+<%- include('partials/footer') %>
