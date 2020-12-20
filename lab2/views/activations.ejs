@@ -15,7 +15,7 @@
             <% if(user.role <= 2) { %>
             <% if (data.length != 0) { %>
                 <form action="/activations" method="post">
-                    <p><b>Выберите вылосипед для активации: </b><br>
+                    <p><b>Выберите вилосипед для активации: </b><br>
                     <p><select name="order"  size="1" required>
                             <% for (let i = 0; i < data.length; i++) { %>
                                 <option value="<%= data[i].id_order %>"> <%= users[data[i].id_user - 1].name %> <%= data[i].bicycles_mark %> <%= data[i].date %></option>

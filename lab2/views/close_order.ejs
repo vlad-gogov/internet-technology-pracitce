@@ -15,7 +15,7 @@
                                     <option value="<%= place[i].id_place %> "><%= place[i].name_place %> </option>
                                 <% } %>
                             </select></p>
-                        <p><b>Выберите вылосипед для завершения: </b><br>
+                        <p><b>Выберите вилосипед для завершения: </b><br>
                         <p><select name="order"  size="1" required>
                                 <% for (let i = 0; i < order.length; i++) { %>
                                 <option value="<%=  order[i].id_order %> "> <%= users[order[i].id_user - 1].name %> <%=  order[i].bicycles_mark %>  <%=  order[i].date %> </option>

@@ -203,7 +203,7 @@ exp.post('/activations', urlencodedParser, function (req, res) {
     if (user.ok)
         auth = true;
     database.query('UPDATE orders SET status = 1 WHERE id_order = ?', [req.body.order]);
-    let text_price = "Заказа " + req.body.order + " активирован";
+    let text_price = "Заказ " + req.body.order + " активирован";
     res.render('activations', {
         title: 'Активация проката',
         user: user,
