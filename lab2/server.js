@@ -6,9 +6,9 @@ const database = require('./modules/database');
 const cookieParser = require('cookie-parser');
 let app = require('./modules/app');
 
-const exp = express()
+const exp = express();
 
-exp.set('view engine', 'ejs') // регистрация расширения
+exp.set('view engine', 'ejs');
 
 let authUserWithSession = (request, _result) => {
     let session = request.cookies.session;
